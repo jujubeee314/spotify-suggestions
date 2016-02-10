@@ -9,11 +9,18 @@
 
 {% block content %}
 <div class="container-fluid">
-    <h2 class="text-center">{{user.profile_id}}</h2>
-    <div class="text-center">
-        <a href="{{ url_for('users_tracks') }}" class="btn btn-lg btn-success">Your Saved Tracks</a><br>
-        <a href="{{ url_for('similar_users') }}" class="btn btn-lg btn-success">View Most Similar Users</a><br>
-        <a href="{{ url_for('recommendations') }}" class="btn btn-lg btn-success">Get Recommendations</a><br>
-    </div>
+	<div class="row">
+		<div class="col-12-lg">
+			<h2 class="text-center">{{user.profile_id}}</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12-lg">
+			<ul class="nav nav-pills nav-stacked">
+				<li><a href="{{ url_for('users_tracks') }}" class="btn btn-lg btn-success">Your Saved Tracks</a></li>
+				<li><a href="{{ url_for('similar_users') }}" class="btn btn-lg btn-success">View Most Similar Users</a></li>
+				<li><a href="{{ url_for('recommendations') }}" class="btn btn-lg btn-success">Get Recommendations</a></li>
+			</ul>
+		</div>
 </div>
 {% endblock %}
